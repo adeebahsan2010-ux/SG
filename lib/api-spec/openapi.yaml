@@ -1,0 +1,322 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: SHREE GANESH ARTS API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: products
+    description: Product catalog operations
+  - name: categories
+    description: Product category operations
+  - name: testimonials
+    description: Customer testimonial operations
+  - name: newsletter
+    description: Newsletter subscription operations
+  - name: contact
+    description: Contact form operations
+  - name: catalog
+    description: Catalog aggregations and featured collections
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /products:
+    get:
+      operationId: listProducts
+      tags: [products]
+      summary: List all products
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: featured
+          in: query
+          schema:
+            type: boolean
+        - name: newArrival
+          in: query
+          schema:
+            type: boolean
+        - name: bestSeller
+          in: query
+          schema:
+            type: boolean
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: minPrice
+          in: query
+          schema:
+            type: number
+        - name: maxPrice
+          in: query
+          schema:
+            type: number
+      responses:
+        "200":
+          description: List of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /products/{id}:
+    get:
+      operationId: getProduct
+      tags: [products]
+      summary: Get a single product
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Not found
+
+  /categories:
+    get:
+      operationId: listCategories
+      tags: [categories]
+      summary: List all product categories
+      responses:
+        "200":
+          description: List of categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+
+  /testimonials:
+    get:
+      operationId: listTestimonials
+      tags: [testimonials]
+      summary: List customer testimonials
+      responses:
+        "200":
+          description: List of testimonials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Testimonial"
+
+  /newsletter:
+    post:
+      operationId: subscribeNewsletter
+      tags: [newsletter]
+      summary: Subscribe to newsletter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewsletterInput"
+      responses:
+        "201":
+          description: Subscribed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+        "400":
+          description: Already subscribed or invalid email
+
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [contact]
+      summary: Submit contact form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+
+  /catalog/featured:
+    get:
+      operationId: getFeaturedCatalog
+      tags: [catalog]
+      summary: Get featured collections summary
+      responses:
+        "200":
+          description: Featured catalog data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FeaturedCatalog"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    Product:
+      type: object
+      required: [id, name, price, category, imageUrl, description]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+        originalPrice:
+          type: ["number", "null"]
+        category:
+          type: string
+        imageUrl:
+          type: string
+        imageUrls:
+          type: array
+          items:
+            type: string
+        fabric:
+          type: ["string", "null"]
+        occasion:
+          type: ["string", "null"]
+        isNew:
+          type: boolean
+        isFeatured:
+          type: boolean
+        isBestSeller:
+          type: boolean
+        inStock:
+          type: boolean
+        rating:
+          type: ["number", "null"]
+        reviewCount:
+          type: ["integer", "null"]
+
+    Category:
+      type: object
+      required: [id, name, slug, productCount]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        slug:
+          type: string
+        description:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        productCount:
+          type: integer
+
+    Testimonial:
+      type: object
+      required: [id, name, rating, review, location]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        rating:
+          type: number
+        review:
+          type: string
+        location:
+          type: string
+        avatarUrl:
+          type: ["string", "null"]
+        product:
+          type: ["string", "null"]
+
+    NewsletterInput:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+          format: email
+
+    ContactInput:
+      type: object
+      required: [name, email, message]
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: ["string", "null"]
+        message:
+          type: string
+
+    SuccessResponse:
+      type: object
+      required: [success, message]
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+
+    FeaturedCatalog:
+      type: object
+      required: [newArrivals, bestSellers, featured, totalProducts, totalCategories]
+      properties:
+        newArrivals:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        bestSellers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        featured:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        totalProducts:
+          type: integer
+        totalCategories:
+          type: integer

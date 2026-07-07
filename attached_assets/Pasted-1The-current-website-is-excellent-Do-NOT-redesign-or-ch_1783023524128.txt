@@ -1,0 +1,163 @@
+1The current website is excellent. Do NOT redesign or change the overall UI, color palette, premium luxury aesthetic, animations, layout, typography, spacing, transitions, or responsive structure. Keep everything exactly as it is.
+
+Only implement the following improvements and bug fixes:
+
+1. Google Maps
+Replace the current location with the real Google Maps location:
+https://maps.app.goo.gl/eCF2muDGMH5bz3BQ9
+
+Whenever a user clicks the address or map, it should open this exact Google Maps location in a new tab.
+
+2. Product Image Viewer
+Fix the product image viewer.
+
+Currently the image overlaps the product information.
+
+Instead:
+
+- Image should stay on the left.
+- Product information should stay on the right.
+- Layout should remain perfectly aligned.
+- Fully responsive.
+
+Make it similar to premium ecommerce websites like Myntra, Zara or H&M.
+
+3. Product Gallery
+When clicking a product image:
+
+Open a proper image gallery/lightbox.
+
+Users can:
+- Zoom
+- Previous
+- Next
+- Close
+
+Do NOT jump directly to "You May Also Like".
+
+The recommendation section must remain below the product page.
+
+4. Category Filter Bug
+Fix category filtering.
+
+Currently after selecting a category the products disappear and users must click "Clear Filters".
+
+The category system should work properly.
+
+If products exist in the selected category they must immediately appear.
+
+If no products exist, display:
+
+"No products available in this category."
+
+Do NOT require users to click Clear Filters.
+
+5. Discover Our Story
+The "Discover Our Story" button currently opens the wrong page.
+
+Create a dedicated About page.
+
+For now use premium placeholder content.
+
+I will replace the story later.
+
+6. FAQ
+Remove the international shipping question.
+
+Replace it with:
+
+"Do you offer alterations or custom fittings?"
+
+Answer with a professional placeholder.
+
+7. Instagram Section
+Keep the same design.
+
+Only change the content.
+
+Replace:
+
+"Join our exclusive circle"
+
+with
+
+"Follow us on Instagram"
+
+Replace:
+
+"Your Email Address"
+
+with
+
+"@shreeganesh1317"
+
+Replace Subscribe button with:
+
+"Follow"
+
+Clicking Follow should open:
+
+https://instagram.com/shreeganesh1317
+
+Keep all colors, spacing and animations exactly the same.
+
+8. Shipping Policy
+Remove the Shipping Policy button.
+
+9. Return & Exchange
+When clicking Return & Exchange automatically open WhatsApp with this message:
+
+Hello, I would like to exchange a product purchased from SHREE GANESH ARTS.
+
+Use:
++91 94650 91977
+
+10. Search
+Enable the search completely.
+
+Users should be able to search:
+
+Product names
+
+Categories
+
+Collections
+
+Keywords
+
+Partial names
+
+Suggestions
+
+Autocomplete
+
+If nothing is found show similar suggestions instead of an empty page.
+
+11. Mobile Optimization
+Carefully test the entire website.
+
+Nothing should overlap.
+
+No animations should break.
+
+No text should be cut.
+
+No images should overflow.
+
+Everything must work perfectly on Android, iPhone, tablet and desktop.
+
+12. Product Images
+Keep placeholders.
+
+I will replace all product images later.
+
+13. Performance
+Improve loading speed.
+
+Optimize animations.
+
+Fix all UI bugs.
+
+Do not change the premium appearance.
+
+Keep the website visually identical except for the requested improvements.

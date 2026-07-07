@@ -1,0 +1,216 @@
+Build a world-class premium luxury e-commerce website for a women's fashion brand called "SHREE GANESH ARTS" (Pappu Di Hatti).
+
+The website should take inspiration from the premium quality, elegance, visual storytelling, and luxury brand experience of gvhair.com, but all layouts, components, animations, visuals, interactions, and implementation must be original and created from scratch for this clothing brand.
+
+The goal is to achieve the same level of sophistication, smoothness, premium feel, responsiveness, and attention to detail while creating a unique fashion brand identity.
+
+Brand Details:
+
+Brand Name:
+SHREE GANESH ARTS
+
+Subtitle:
+Pappu Di Hatti
+
+Business:
+Premium Women's Fashion Boutique
+
+Products:
+• Designer Suits
+• Party Wear Suits
+• Bridal Lehengas
+• Anarkali Dresses
+• Pakistani Suits
+• Gowns
+• Kurtis
+• Dupattas
+• Dress Materials
+• Women's Fashion Collection
+
+Contact Number:
++91 94650 91977
+
+WhatsApp:
++91 94650 91977
+
+Instagram:
+@shreeganesh1317
+
+Address:
+18, Gurudwara Road,
+Near Lovely Sweets,
+Sadar Bazar,
+Jalandhar Cantt,
+Punjab 144005
+
+Google Maps:
+https://maps.app.goo.gl/eCF2muDGMH5bz3BQ9
+
+Logo Requirements:
+
+Design a luxurious text logo.
+
+Text:
+SG
+
+Style:
+Bold
+Elegant
+Premium
+Crystal metallic gold finish
+Luxury fashion branding
+
+Use a dark premium background that complements the logo.
+
+Overall Website Style:
+
+Luxury
+
+Minimal
+
+Modern
+
+Editorial
+
+High Fashion
+
+Premium
+
+Elegant
+
+Timeless
+
+Fully Responsive
+
+iOS + Android optimized
+
+Desktop optimized
+
+Fast loading
+
+SEO optimized
+
+Accessibility friendly
+
+Features:
+
+Sticky transparent navbar
+
+Mega menu
+
+Wishlist
+
+Search
+
+WhatsApp Order
+
+Instagram link
+
+Contact section
+
+Google Maps
+
+Working product pages
+
+Product categories
+
+Product filtering
+
+Product search
+
+Product cards
+
+Price tags
+
+Quick View
+
+New Arrival section
+
+Featured Collection
+
+Best Sellers
+
+Testimonials
+
+FAQ
+
+About Us
+
+Contact Form
+
+Newsletter
+
+Footer
+
+Social Links
+
+Smooth scrolling
+
+Premium page transitions
+
+Micro interactions
+
+Elegant hover effects
+
+Animated buttons
+
+Animated cards
+
+Premium loading experience
+
+Floating WhatsApp button
+
+Scroll to top button
+
+Hero Section:
+
+Large premium hero.
+
+Headline:
+SHREE GANESH ARTS
+
+Luxury fashion statement.
+
+Strong call-to-action buttons.
+
+Beautiful placeholder fashion photography.
+
+Product Section:
+
+Use elegant placeholder images.
+
+Show realistic price tags.
+
+Use premium product cards.
+
+I will replace all images later.
+
+About Section:
+
+Write a premium brand story suitable for a luxury women's clothing boutique.
+
+Testimonials:
+
+Include realistic placeholder customer reviews inspired by the type of feedback customers commonly leave for highly rated fashion boutiques.
+
+Technology:
+
+React
+
+Next.js
+
+Tailwind CSS
+
+Framer Motion
+
+Modern component architecture
+
+Reusable components
+
+Optimized performance
+
+Clean folder structure
+
+Professional coding standards
+
+Deliver a complete production-ready website with premium UX, polished interactions, and a unique luxury identity suitable for a high-end women's fashion brand.
